@@ -1,0 +1,115 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  padding-top: 55px;
+  margin-left: 85px;
+
+  @include media("max", "lg") {
+    padding-top: 35px;
+    margin-left: 45px;
+  }
+
+  @include media("max", "xs") {
+    padding-top: 25px;
+    margin-left: 25px;
+  }
+
+  @media screen and (max-width: 915px) and (orientation: landscape) {
+    padding-top: 25px;
+  }
+
+  &__link {
+    font-family: "Glober";
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    animation: showText 3s linear;
+    color: white;
+
+    &:first-of-type {
+     margin-right: 50px;
+
+     @include media("max", "lg") {
+      margin-right: 35px;
+    }
+    }
+
+    @include media("max", "lg") {
+      font-size: 18px;
+    }
+
+    &_active {
+      border-bottom: 1.5px solid rgb(188, 186, 186);
+    }
+  }
+}
+
+.title {
+  font-family: "Glober";
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-size: 60px;
+  font-weight: normal;
+  margin-top: 68vh;
+  animation: showText 3s linear;
+
+  @include media("max", "lg") {
+    font-size: 50px;
+    margin-top: 65vh;
+    margin-bottom: 0;
+  }
+
+  @include media("max", "sm") {
+    font-size: 38px;
+    margin-top: 61vh;
+  }
+
+  @media screen and (max-width: 414px) {
+    font-size: 34px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 280px) {
+    font-size: 26px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    font-size: 42px;
+  }
+
+  @media screen and (max-width: 915px) and (orientation: landscape) {
+    font-size: 36px;
+    margin-top: 60vh;
+  }
+}
+
+.subtitle {
+  font-family: "Glober";
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 0.2em;
+  line-height: normal;
+  margin-bottom: 400px;
+  animation: showText 3s linear;
+  font-weight: normal;
+
+  @include media("max", "sm") {
+    font-size: 24px;
+    margin-bottom: 35vh;
+  }
+
+
+  @media screen and (max-width: 280px) {
+    font-size: 18px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    font-size: 22px;
+    margin-bottom: 200px;
+  }
+}

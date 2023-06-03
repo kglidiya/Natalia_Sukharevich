@@ -1,0 +1,14 @@
+.ie__page {
+  padding: 0;
+  width: 80%;
+  height: 100vh;
+  font-family: "Lato", "Rubik", "Inter", sans-serif;
+  align-items: center;
+  margin: auto;
+  margin-top: 20%;
+  text-align: center;
+
+  &_title {
+    color: rgb(10, 13, 119);
+  }
+}

@@ -1,0 +1,282 @@
+.audio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  z-index: 5;
+  margin-top: 30px;
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 25px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (max-width: 576px) {
+    box-shadow: none;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  @media screen and (max-width: 915px) and (orientation: landscape) {
+    margin-top: 0;
+  }
+
+  &__link {
+    align-self: center;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 1024px) {
+      width: 40%;
+      margin-bottom: 0;
+      margin-left: 2%;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 90%;
+      margin: 20px auto 20px auto;
+    }
+
+    @media screen and (max-width: 915px) and (orientation: landscape) {
+      padding-top: 17px;
+    }
+  }
+
+  &__disk {
+    width: 400px;
+    height: 400px;
+    background: url(../images/disk.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 22%;
+    display: flex;
+
+    @media screen and (max-width: 1200px) {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+
+    @include media("max", "md") {
+      max-height: 35vh;
+      max-width: 35vw;
+    }
+
+    @include media("max", "sm") {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+    @media screen and (min-width: 576px) and (max-width: 915px) and (orientation: landscape) {
+      max-height: 70vh;
+      max-width: 70vw;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-right: 20px;
+    height: 60vh;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgb(239, 234, 225);
+      width: 30%;
+    }
+    @media screen and (max-width: 915px) and (orientation: landscape) {
+      height: 90vh;
+    }
+    @media screen and (max-width: 1200px) {
+      padding-right: 0;
+    }
+
+    @include media("max", "lg") {
+      height: 400px;
+      padding-bottom: 30px;
+    }
+
+    @include media("max", "md") {
+      height: 415px;
+      width: 55%;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-top: 15px;
+      height: 350px;
+      padding-right: 0;
+      margin-top: 15px;
+      width: 96%;
+    }
+
+    @include media("max", "xs") {
+      padding-top: 0;
+      height: 290px;
+    }
+  }
+
+  &__container {
+    width: 45vw;
+    min-height: 45px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+
+    @media screen and (max-width: 915px) and (orientation: landscape) {
+      width: 45vw;
+      padding-left: 20px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 48vw;
+      margin-right: 15px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px 10px 10px 20px;
+      width: 50vw;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 90vw;
+    }
+
+    @include media("max", "xs") {
+      margin-right: 0;
+      padding: 5px 5px 5px 20px;
+    }
+
+    &_active {
+      background-color: rgb(18, 17, 17);
+    }
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-left: 20px;
+    }
+
+    @include media("max", "xs") {
+      padding-left: 0;
+    }
+  }
+
+  &__progress {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(71, 69, 69);
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    @include media("max", "md") {
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+  }
+
+  &__bar {
+    border-bottom: 1px solid whitesmoke;
+    width: 0;
+    margin-bottom: -1px;
+  }
+
+  &__btn-play {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 17px;
+    height: 17px;
+    border-color: transparent transparent transparent rgb(191, 189, 189);
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &__btn-pause {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 17px;
+    height: 17px;
+    border-color: transparent transparent transparent rgb(191, 189, 189);
+    border-style: solid;
+    border-width: 8px 0 8px 17px;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 15px;
+    display: none;
+    padding: 0;
+  }
+
+  &__btn_hidden {
+    display: none;
+  }
+
+  &__btn_visible {
+    display: block;
+  }
+
+  &__title {
+    height: auto;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+
+    @include media("max", "xs") {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 915px) and (orientation: landscape) {
+      font-size: 14px;
+    }
+  }
+
+  &__duration {
+    padding-right: 10px;
+    margin: 0;
+    width: 50px;
+
+    @include media("max", "xs") {
+      font-size: 14px;
+    }
+  }
+}
