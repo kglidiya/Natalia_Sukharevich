@@ -15,7 +15,7 @@ From web design (desktop/tablet/mobile) to deployment.
 -	Slider with iframe YouTube videos and preview images for optimization
 -	Audio player implemented with HTML audio tags (preloading track metadata only)
 -	Photo popup
--	Contact form (PHP) to leave messages and links to social accounts
+-	Contact form (PHP) and links to social accounts
 
 
 ### Tech stack:
